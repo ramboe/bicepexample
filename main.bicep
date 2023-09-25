@@ -2,10 +2,11 @@
 @maxLength(24) //
 @description('Provide a name for the storage account. Use only lower case letters and numbers. The name must be unique across Azure.')
 param storageName string
+param location string
 
 resource virtualNetwork 'Microsoft.Network/virtualNetworks@2019-11-01' = {
   name: 'examplevnet'
-  location: 'eastus'
+  location: location
   properties: {
     addressSpace: {
       addressPrefixes: [
@@ -31,7 +32,7 @@ resource virtualNetwork 'Microsoft.Network/virtualNetworks@2019-11-01' = {
 
 resource exampleStorage 'Microsoft.Storage/storageAccounts@2023-01-01' = {
   name: storageName
-  location: 'eastus'
+  location: location
   sku: {
     name: 'Standard_LRS'
   }
