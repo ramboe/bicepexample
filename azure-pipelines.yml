@@ -8,7 +8,7 @@ variables:
 
   azureServiceConnection: 'Visual Studio Enterprise (865900f2-87ff-4906-8a58-102b67d6abac)'
   resourceGroupName: 'exampleRG'
-  location: 'switzland-north'
+  location: 'switzerlandnorth'
   templateFile: 'main.bicep'
 pool:
   vmImage: $(vmImageName)
