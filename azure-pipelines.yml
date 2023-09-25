@@ -23,4 +23,4 @@ steps:
     inlineScript: |
       az --version
       az group create --name $(resourceGroupName) --location $(location)
-      az deployment group create --resource-group $(resourceGroupName) --template-file $(templateFile) --parameters storageAccountType='Standard_GRS' location='eastus'
+      az deployment group create --resource-group $(resourceGroupName) --template-file $(templateFile) --parameters storageName='myexamplestorageclemens1337fromazurepipeline' location='eastus'
